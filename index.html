@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="black-friday-bar" class="black-friday-bar hide">
+        <p>Отримайте <span class="black-friday-bold">знижку 40%</span> з кодом <span
+                class="black-friday-bold">BLCK40</span></p>
+
+        <a href="https://app.bitfaktura.com.ua/goto?after_url=account/" class="black-friday-btn">Придбати</a>
+    </div>
+
+    <div class="placeholder"></div>
+
+    <script>
+        let bannerFunction = () => {
+            let bar = document.getElementById('black-friday-bar');
+            let distance = window.scrollY;
+
+            if (distance >= 550) {
+                bar.classList.remove('hide')
+            } else {
+                bar.classList.add('hide');
+            }
+        }
+
+        document.addEventListener('scroll', bannerFunction);
+    </script>
+</body>
+
+</html>
